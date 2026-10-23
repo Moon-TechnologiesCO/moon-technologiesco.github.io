@@ -1,0 +1,94 @@
+/* Motion: every animation on the site lives here, so it can be reviewed (and switched off) in one place.
+   Principle: slow, soft and meaningful — like the moon. Nothing flashes, nothing bounces.
+   Everything below is disabled for people who ask for reduced motion. */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ---------- Hero: the moon waxes into a smile, then floats ---------- */
+  .hero-moon__shadow { animation: wax 2.4s 0.2s var(--ease) both; }
+  @keyframes wax { from { transform: translateY(128px); } to { transform: translateY(0); } }
+
+  .hero-moon { animation: float 9s 2.6s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  /* Gentle parallax driven by the pointer (see motion.js: --px, --py). */
+  .hero__moon[data-parallax] { transform: translate3d(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 14px), 0); transition: transform 600ms var(--ease); }
+
+  /* ---------- Hero: lines rise in, one after another ---------- */
+  .js .hero__title > span,
+  .js .hero .eyebrow,
+  .js .hero .lead,
+  .js .hero__actions,
+  .js .hero .chips { animation: rise 900ms var(--ease) both; }
+  .js .hero .eyebrow { animation-delay: 100ms; }
+  .js .hero__title > span:nth-child(1) { animation-delay: 220ms; }
+  .js .hero__title > span:nth-child(2) { animation-delay: 380ms; }
+  .js .hero .lead { animation-delay: 560ms; }
+  .js .hero__actions { animation-delay: 700ms; }
+  .js .hero .chips { animation-delay: 840ms; }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+
+  /* Moonlight sweeping across the serif line. */
+  .js .hero__title > span.serif {
+    background: linear-gradient(100deg, var(--moon-edge) 0%, var(--moon-edge) 40%, #FFFFFF 50%, var(--moon-edge) 60%, var(--moon-edge) 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: rise 900ms 380ms var(--ease) both, sheen 7s 2s ease-in-out infinite;
+  }
+  @keyframes sheen { 0% { background-position: 100% 0; } 45%, 100% { background-position: 0% 0; } }
+
+  /* ---------- Cards: staggered reveal and a spotlight that follows the pointer ---------- */
+  .js .reveal:nth-child(2) { transition-delay: 70ms; }
+  .js .reveal:nth-child(3) { transition-delay: 140ms; }
+  .js .reveal:nth-child(4) { transition-delay: 210ms; }
+  .js .reveal:nth-child(5) { transition-delay: 280ms; }
+  .js .reveal:nth-child(6) { transition-delay: 350ms; }
+
+  .card::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 233, 168, 0.10), transparent 45%);
+    opacity: 0; transition: opacity 400ms var(--ease);
+  }
+  .card:hover::after { opacity: 1; }
+
+  /* Phase icons: the lit part fades in when the card appears. */
+  .js .reveal .phase .lit { opacity: 0; transition: opacity 1.2s 300ms var(--ease); }
+  .js .reveal.is-visible .phase .lit { opacity: 1; }
+
+  /* ---------- MoonCam card: a live camera ---------- */
+  .live-dot { animation: live 2.4s ease-in-out infinite; }
+  @keyframes live { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+  .lens-moon { transform-origin: 130px 112px; animation: lens 12s ease-in-out infinite; }
+  @keyframes lens { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+
+  /* ---------- Story: the moon breathes slowly ---------- */
+  .story__art img { animation: float 11s ease-in-out infinite; }
+
+  /* ---------- Lino: the cradle moon rocks him gently ---------- */
+  .lino__art.is-visible { animation: rock 6s 1s ease-in-out infinite; transform-origin: 50% 30%; }
+  @keyframes rock { 0%, 100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+
+  /* ---------- Founder: a soft halo around the portrait ---------- */
+  .portrait::before { animation: halo 6s ease-in-out infinite; }
+  @keyframes halo {
+    0%, 100% { box-shadow: 0 0 0 1px var(--border-strong), 0 0 60px rgba(255, 233, 168, 0.14); }
+    50% { box-shadow: 0 0 0 1px var(--border-strong), 0 0 100px rgba(255, 233, 168, 0.26); }
+  }
+
+  /* ---------- Buttons: a moonlight sheen on hover ---------- */
+  .btn { position: relative; overflow: hidden; }
+  .btn::after {
+    content: ""; position: absolute; inset: 0; transform: translateX(-120%);
+    background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.22) 50%, transparent 70%);
+    transition: transform 700ms var(--ease);
+  }
+  .btn:hover::after { transform: translateX(120%); }
+}
+
+/* ---------- Reading progress: a thin line of moonlight under the navigation ---------- */
+.nav__progress {
+  position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%;
+  transform-origin: 0 50%; transform: scaleX(var(--progress, 0));
+  background: linear-gradient(90deg, var(--sky), var(--violet), var(--glow));
+  pointer-events: none;
+}

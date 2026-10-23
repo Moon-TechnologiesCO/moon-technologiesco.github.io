@@ -1,0 +1,122 @@
+/* Components: reusable pieces used across sections. */
+
+/* ---------- Starfield (fixed canvas behind everything) ---------- */
+.starfield { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+  background: rgba(16, 22, 51, 0.55);
+  border-bottom: 1px solid var(--border);
+}
+.nav__inner { display: flex; align-items: center; gap: var(--space-5); height: 68px; }
+.nav__brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; font-weight: 620; letter-spacing: -0.01em; }
+.nav__brand img { width: 30px; height: 30px; }
+.nav__brand span { white-space: nowrap; }
+.nav__links { display: flex; gap: var(--space-1); margin: 0 0 0 auto; padding: 0; list-style: none; }
+.nav__links a {
+  display: block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-pill);
+  color: var(--text-muted); text-decoration: none; font-size: var(--step--1); font-weight: 500;
+  transition: color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.nav__links a:hover { color: var(--text); background: var(--surface); }
+.nav__actions { display: flex; align-items: center; gap: var(--space-3); }
+.nav .nav__menu { display: none; }
+
+@media (max-width: 880px) {
+  .nav__links {
+    position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0;
+    padding: var(--space-3) var(--gutter) var(--space-5);
+    background: rgba(16, 22, 51, 0.94); border-bottom: 1px solid var(--border);
+    display: none;
+  }
+  .nav[data-open="true"] .nav__links { display: flex; }
+  .nav__links a { padding: var(--space-3) 0; font-size: var(--step-0); border-radius: 0; }
+  .nav__actions { margin-left: auto; }
+  .nav .nav__menu { display: inline-grid; }
+}
+@media (max-width: 440px) {
+  .nav__inner { gap: var(--space-3); }
+  .nav__actions .icon-btn[href] { display: none; }
+}
+
+/* ---------- Language toggle: a minimal two-option segmented control ---------- */
+.lang-toggle {
+  position: relative; display: inline-grid; grid-template-columns: 1fr 1fr;
+  padding: 3px; border-radius: var(--radius-pill);
+  background: var(--surface); border: 1px solid var(--border);
+}
+.lang-toggle::before {
+  content: ""; position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px);
+  border-radius: var(--radius-pill); background: var(--surface-strong);
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+  transition: transform var(--duration) var(--ease);
+}
+.lang-toggle[data-lang="es"]::before { transform: translateX(100%); }
+.lang-toggle button {
+  position: relative; z-index: 1; min-width: 38px; padding: 5px 10px;
+  border: 0; background: none; color: var(--text-faint); cursor: pointer;
+  font: 600 12px/1 var(--font-mono); letter-spacing: 0.08em;
+  transition: color var(--duration) var(--ease);
+}
+.lang-toggle button[aria-pressed="true"] { color: var(--text); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: 0.85em 1.5em; border-radius: var(--radius-pill);
+  font: 600 var(--step-0)/1 var(--font-sans); text-decoration: none; cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform var(--duration) var(--ease), background var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary { background: var(--gradient-accent); color: #fff; box-shadow: 0 10px 30px -10px rgba(110, 63, 216, 0.8); }
+.btn--ghost { color: var(--text); border-color: var(--border-strong); background: var(--surface); }
+.btn--ghost:hover { background: var(--surface-strong); }
+.icon-btn {
+  display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+  color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); cursor: pointer;
+}
+.icon-btn:hover { color: var(--text); background: var(--surface-strong); }
+.icon-btn svg { width: 18px; height: 18px; }
+
+/* ---------- Chips ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--radius-pill);
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-muted); font-size: var(--step--1); font-weight: 500;
+}
+.chip svg { width: 14px; height: 14px; color: var(--glow); }
+
+/* ---------- Cards ---------- */
+.card {
+  position: relative; padding: var(--space-6); border-radius: var(--radius-l);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+.card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+.card h3 { font-size: var(--step-1); margin-bottom: var(--space-2); }
+.card p { color: var(--text-muted); }
+
+/* ---------- Moon phase icon ---------- */
+.phase { width: 44px; height: 44px; margin-bottom: var(--space-4); }
+.phase .disc { fill: rgba(200, 210, 255, 0.12); stroke: rgba(255, 255, 255, 0.25); stroke-width: 1; }
+.phase .lit { fill: var(--moonlight); }
+
+/* ---------- Status badge ---------- */
+.status {
+  display: inline-flex; align-items: center; gap: 6px; font: 600 11px/1 var(--font-mono);
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--glow);
+}
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: 0 0 10px currentColor; }
+.status--live { color: #7BE3B5; }
+.status--early { color: var(--mist); }
+
+/* ---------- Section heading ---------- */
+.section-head { max-width: 720px; margin-bottom: var(--space-7); }
+.section-head h2 { font-size: var(--step-3); margin: var(--space-3) 0 var(--space-4); }
+.section-head p { color: var(--text-muted); font-size: var(--step-1); }

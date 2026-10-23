@@ -1,0 +1,58 @@
+/* Design tokens — the single source of truth for colour, type, space and motion.
+   Values come from the Moon Technologies brand book (brand/BRAND.md). */
+
+@font-face { font-family: "Moon Sans"; src: url("../fonts/MoonSans-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Moon Sans"; src: url("../fonts/MoonSans-Italic-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Moon Serif"; src: url("../fonts/MoonSerif-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Moon Serif"; src: url("../fonts/MoonSerif-Italic-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Moon Mono"; src: url("../fonts/MoonMono-Variable.woff2") format("woff2"); font-weight: 100 800; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: dark;
+
+  /* Colour */
+  --night: #101633;
+  --deep-violet: #1F1752;
+  --moonlight: #FFF8E7;
+  --moon-edge: #EADFC0;
+  --glow: #FFE9A8;
+  --mist: #C9CFF5;
+  --sky: #4F86FF;
+  --violet: #9B5CFF;
+  --sky-600: #2F5FD0;
+  --violet-600: #6E3FD8;
+
+  --text: var(--moonlight);
+  --text-muted: var(--mist);
+  --text-faint: rgba(201, 207, 245, 0.62);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.09);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --gradient-accent: linear-gradient(100deg, var(--sky-600), var(--violet-600));
+  --gradient-sky: linear-gradient(170deg, var(--night) 0%, #141a3f 45%, var(--deep-violet) 100%);
+
+  /* Type */
+  --font-sans: "Moon Sans", -apple-system, "SF Pro Text", system-ui, sans-serif;
+  --font-serif: "Moon Serif", Georgia, serif;
+  --font-mono: "Moon Mono", ui-monospace, "SF Mono", monospace;
+  --step--1: clamp(0.84rem, 0.82rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.09rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.35vw, 1.4rem);
+  --step-2: clamp(1.5rem, 1.33rem + 0.8vw, 2rem);
+  --step-3: clamp(2rem, 1.6rem + 1.9vw, 3.1rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.4vw, 4.6rem);
+
+  /* Space and shape */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.5rem; --space-6: 2rem; --space-7: 3rem; --space-8: 4.5rem; --space-9: 7rem;
+  --radius-s: 10px; --radius-m: 18px; --radius-l: 28px; --radius-pill: 999px;
+  --content: 1120px;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  /* Effects and motion */
+  --glass-blur: blur(22px) saturate(160%);
+  --shadow-soft: 0 24px 60px -24px rgba(5, 8, 30, 0.75);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 260ms;
+}

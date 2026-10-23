@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="meta.title">Moon Technologies — Software that shines, with nothing to hide</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="Moon Technologies is a Colombian software company. We design and build secure, local-first, beautifully crafted software for people and businesses — and share much of it as free software.">
+  <meta name="theme-color" content="#101633">
+  <link rel="canonical" href="https://moon-technologiesco.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+  <link rel="preload" href="assets/fonts/MoonSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Moon Technologies">
+  <meta property="og:title" content="Moon Technologies">
+  <meta property="og:description" data-i18n-attr="content:meta.og" content="Software that shines, with nothing to hide.">
+  <meta property="og:image" content="https://moon-technologiesco.github.io/assets/img/og-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Moon Technologies",
+    "url": "https://moon-technologiesco.github.io/",
+    "logo": "https://moon-technologiesco.github.io/assets/img/favicon-512.png",
+    "slogan": "Software that shines, with nothing to hide.",
+    "foundingLocation": { "@type": "Place", "name": "Colombia" },
+    "founder": { "@type": "Person", "name": "Jose David Carranza Angarita" },
+    "sameAs": ["https://github.com/Moon-TechnologiesCO"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <canvas class="starfield" aria-hidden="true"></canvas>
+
+  <header class="nav" data-open="false">
+    <div class="nav__progress" aria-hidden="true"></div>
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Moon Technologies — home">
+        <img src="assets/img/symbol.svg" alt="" width="30" height="30">
+        <span>Moon Technologies</span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#work" data-i18n="nav.work">Open source</a></li>
+        <li><a href="#principles" data-i18n="nav.principles">Principles</a></li>
+        <li><a href="#story" data-i18n="nav.story">Story</a></li>
+        <li><a href="#founder" data-i18n="nav.founder">Founder</a></li>
+      </ul>
+      <div class="nav__actions">
+        <div class="lang-toggle" role="group" aria-label="Language / Idioma" data-lang="en">
+          <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+        </div>
+        <a class="icon-btn" href="https://github.com/Moon-TechnologiesCO" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <button class="icon-btn nav__menu" type="button" aria-controls="nav-links" aria-expanded="false" data-i18n-attr="aria-label:nav.menu" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Software company · Colombia</p>
+          <h1 class="hero__title">
+            <span data-i18n="hero.title1">Software that shines,</span>
+            <span class="serif" data-i18n="hero.title2">with nothing to hide.</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">We design and build software for people and businesses — secure, local-first and crafted with care. And we share much of it with the world as free software.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#services" data-i18n="hero.cta.services">What we do</a>
+            <a class="btn btn--ghost" href="#story" data-i18n="hero.cta.story">Why a smiling moon?</a>
+          </div>
+          <ul class="chips">
+            <li class="chip"><span data-i18n="hero.chip.secure">Secure by design</span></li>
+            <li class="chip"><span data-i18n="hero.chip.local">Local-first</span></li>
+            <li class="chip"><span data-i18n="hero.chip.open">Open source at heart</span></li>
+            <li class="chip"><span data-i18n="hero.chip.colombia">Made in Colombia</span></li>
+          </ul>
+        </div>
+        <div class="hero__moon" data-parallax>
+          <svg class="hero-moon" viewBox="-320 -320 640 640" role="img" data-i18n-attr="aria-label:img.moon" aria-label="The Moon Technologies cradle moon: a crescent lying on its back like a smile, with the full disc softly visible.">
+            <defs>
+              <linearGradient id="hm-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF8E7"/><stop offset="1" stop-color="#EADFC0"/></linearGradient>
+              <linearGradient id="hm-shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8D2FF" stop-opacity="0.22"/><stop offset="1" stop-color="#C8D2FF" stop-opacity="0.07"/></linearGradient>
+              <clipPath id="hm-disc"><circle r="300"/></clipPath>
+              <mask id="hm-smile"><circle r="300" fill="#fff"/><circle class="hero-moon__shadow" cy="-128" r="300" fill="#000"/></mask>
+            </defs>
+            <circle r="300" fill="url(#hm-shine)"/>
+            <g clip-path="url(#hm-disc)" fill="#fff" fill-opacity="0.07">
+              <circle cx="-118" cy="-120" r="46"/><circle cx="96" cy="-168" r="30"/><circle cx="150" cy="-40" r="22"/>
+            </g>
+            <circle r="297" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="6"/>
+            <circle class="hero-moon__light" r="300" fill="url(#hm-light)" mask="url(#hm-smile)"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="services.eyebrow">What we do</p>
+          <h2 data-i18n="services.title">Software for people and businesses.</h2>
+          <p data-i18n="services.lead">From the first idea to the release, we design and engineer products that are fast, secure and a pleasure to use.</p>
+        </header>
+        <div class="services__grid">
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M24 4a20 20 0 0 1 0 40z"/></svg>
+            <h3 data-i18n="services.product.t">Product engineering</h3>
+            <p data-i18n="services.product.d">Web, desktop and mobile applications with clean architecture, automated tests and clear documentation.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M4 24a20 20 0 0 0 40 0a20 13 0 0 1-40 0z"/></svg>
+            <h3 data-i18n="services.design.t">Design &amp; UX</h3>
+            <p data-i18n="services.design.d">Interfaces with intention: accessible, consistent and inspired by the best of macOS.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M24 4a20 20 0 0 1 0 40a10 20 0 0 1 0-40z"/></svg>
+            <h3 data-i18n="services.linux.t">Linux &amp; open source</h3>
+            <p data-i18n="services.linux.d">Linux-first software and packaging, and guidance on adopting open source safely in your organisation.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><circle class="lit" cx="24" cy="24" r="20"/></svg>
+            <h3 data-i18n="services.privacy.t">Privacy &amp; security by design</h3>
+            <p data-i18n="services.privacy.d">Local-first architectures, authorised connections and data that stays where it belongs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Moon Open Source -->
+    <section id="work">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="work.eyebrow">Moon Open Source</p>
+          <h2 data-i18n="work.title">Free software, made with love in Colombia.</h2>
+          <p data-i18n="work.lead">Part of what we build belongs to everyone. Read the code, file an issue, send an improvement.</p>
+        </header>
+        <div class="work__grid">
+          <article class="card project project--featured reveal">
+            <div class="project">
+              <span class="status" data-i18n="status.building">In development</span>
+              <h3 class="project__name">MoonCam</h3>
+              <p data-i18n="work.mooncam">Turn your Android phone into a webcam and microphone for your computer — over Wi-Fi or USB, recognised by OBS, Discord, Zoom and Meet as a real camera, with noise suppression and private by design.</p>
+              <ul class="chips"><li class="chip">Kotlin</li><li class="chip">C# · .NET 10</li><li class="chip">Linux first</li></ul>
+              <div class="project__links"><a href="https://github.com/Moon-TechnologiesCO/MoonCam" data-i18n="work.repo">Repository →</a></div>
+            </div>
+            <div class="project__visual" aria-hidden="true">
+              <svg viewBox="0 0 260 260" fill="none">
+                <defs>
+                  <linearGradient id="mc-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF8E7"/><stop offset="1" stop-color="#EADFC0"/></linearGradient>
+                  <mask id="mc-smile"><circle cx="130" cy="112" r="46" fill="#fff"/><circle cx="130" cy="92" r="46" fill="#000"/></mask>
+                </defs>
+                <rect x="70" y="20" width="120" height="220" rx="26" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+                <circle cx="130" cy="112" r="58" fill="rgba(16,22,51,0.8)" stroke="rgba(201,207,245,0.5)" stroke-width="2"/>
+                <circle cx="130" cy="112" r="46" fill="rgba(200,210,255,0.14)"/>
+                <circle class="lens-moon" cx="130" cy="112" r="46" fill="url(#mc-light)" mask="url(#mc-smile)"/>
+                <circle cx="152" cy="92" r="6" fill="rgba(255,255,255,0.55)"/>
+                <circle class="live-dot" cx="130" cy="214" r="5" fill="#7BE3B5"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <span class="status status--live" data-i18n="status.available">Available</span>
+            <h3 class="project__name">Star Language</h3>
+            <p data-i18n="work.star">A modern, space-themed programming language with object-oriented programming, a VS Code extension and installers for Linux, Windows and macOS.</p>
+            <div class="project__links">
+              <a href="https://github.com/Moon-TechnologiesCO/StarLang" data-i18n="work.repo">Repository →</a>
+              <a href="https://star-language-web.vercel.app" data-i18n="work.site">Website →</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <span class="status status--early" data-i18n="status.early">Early stage</span>
+            <h3 class="project__name">NixPlay</h3>
+            <p data-i18n="work.nixplay">A Linux-first game platform that brings Windows, Android and native Linux games together through the runtimes you already trust.</p>
+            <div class="project__links"><a href="https://github.com/Moon-TechnologiesCO/NixPlay" data-i18n="work.repo">Repository →</a></div>
+          </article>
+
+          <article class="card project reveal">
+            <span class="status status--live" data-i18n="status.available">Available</span>
+            <h3 class="project__name">Ideora</h3>
+            <p data-i18n="work.ideora">An infinite canvas for UML diagrams and flowcharts, with sign-in and saving to Google Drive.</p>
+            <div class="project__links">
+              <a href="https://github.com/Moon-TechnologiesCO/Ideora" data-i18n="work.repo">Repository →</a>
+              <a href="https://ideora-labs.vercel.app/" data-i18n="work.site">Website →</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <span class="status status--live" data-i18n="status.available">Available</span>
+            <h3 class="project__name">Star Studio &amp; Packages</h3>
+            <p data-i18n="work.starstudio">Syntax highlighting, project tools and a multi-platform installation hub (APT, PowerShell and Homebrew) for the Star language.</p>
+            <div class="project__links">
+              <a href="https://github.com/Moon-TechnologiesCO/StarStudio" data-i18n="work.repo">Repository →</a>
+              <a href="https://moon-technologiesco.github.io/StarPackages/" data-i18n="work.install">Install →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section id="principles">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="principles.eyebrow">Principles</p>
+          <h2 data-i18n="principles.title">Six principles. One moon.</h2>
+          <p data-i18n="principles.lead">Each of our values comes from something the moon has been doing for four billion years.</p>
+        </header>
+        <div class="principles__grid">
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><circle class="lit" cx="24" cy="24" r="20"/></svg>
+            <h3 data-i18n="p.transparency.t">Transparency</h3>
+            <p data-i18n="p.transparency.d">We work in the open and say clearly what our software does — and what it does not do.</p>
+            <p class="principle__why" data-i18n="p.transparency.w">The full disc is always there, even in shadow.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/></svg>
+            <h3 data-i18n="p.privacy.t">Privacy first</h3>
+            <p data-i18n="p.privacy.d">Local-first by default. No telemetry, no cloud we don't need, no dark patterns.</p>
+            <p class="principle__why" data-i18n="p.privacy.w">The moon keeps watch at night, without watching you.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M24 4a20 20 0 0 1 0 40z"/></svg>
+            <h3 data-i18n="p.craft.t">Craft</h3>
+            <p data-i18n="p.craft.d">Tests, documentation, accessibility and design are part of the product, not extras.</p>
+            <p class="principle__why" data-i18n="p.craft.w">Its phases are so precise you can set a calendar by them.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M4 24a20 20 0 0 0 40 0a20 13 0 0 1-40 0z"/></svg>
+            <h3 data-i18n="p.warmth.t">Warmth</h3>
+            <p data-i18n="p.warmth.d">Friendly software in English and Spanish, written for people who are still learning, too.</p>
+            <p class="principle__why" data-i18n="p.warmth.w">Moonlight lets you see without blinding you.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M24 4a20 20 0 0 1 0 40a10 20 0 0 1 0-40z"/></svg>
+            <h3 data-i18n="p.community.t">Community</h3>
+            <p data-i18n="p.community.d">We build on the work of others, credit it, and give back to free software.</p>
+            <p class="principle__why" data-i18n="p.community.w">It has no light of its own: it reflects the sun's and shares it.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="phase" viewBox="0 0 48 48" aria-hidden="true"><circle class="disc" cx="24" cy="24" r="20"/><path class="lit" d="M24 4a20 20 0 0 1 0 40a13 20 0 0 0 0-40z"/></svg>
+            <h3 data-i18n="p.constancy.t">Constancy</h3>
+            <p data-i18n="p.constancy.d">We maintain what we ship. Long-term care over short-term hype.</p>
+            <p class="principle__why" data-i18n="p.constancy.w">Whatever its phase, the moon always comes back.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story">
+      <div class="container story__grid">
+        <div class="story__art reveal">
+          <img src="assets/img/symbol.svg" width="640" height="640" loading="lazy" alt="" aria-hidden="true">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="story.eyebrow">Our story</p>
+          <h2 class="story__quote serif" data-i18n="story.title">Near the equator, the moon smiles.</h2>
+          <div class="story__body">
+            <p data-i18n="story.p1">In the north, the crescent moon stands upright. In Colombia, close to the equator, it lies on its back — horns up, like a cradle, like a smile. That smiling crescent is our logo.</p>
+            <p data-i18n="story.p2">Look closer and the rest of the moon is still there, glowing softly with earthshine. Nothing is hidden. That full circle is our promise: open code, honest software, and a whole that holds together.</p>
+            <p data-i18n="story.p3">The moon makes no light of its own; it reflects the sun's and shares it with everyone. Free software works the same way — and so do we.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission and vision -->
+    <section id="purpose">
+      <div class="container purpose__grid">
+        <article class="card reveal">
+          <p class="eyebrow" data-i18n="purpose.mission.label">Mission</p>
+          <p data-i18n="purpose.mission">Build reliable, secure software that respects people — and share as much of it as we can as free software that anyone can audit, improve and reuse.</p>
+        </article>
+        <article class="card reveal">
+          <p class="eyebrow" data-i18n="purpose.vision.label">Vision</p>
+          <p data-i18n="purpose.vision">By 2030, to be a Latin American reference for trustworthy, beautifully crafted software — proving from Colombia that technology can be open, secure and worthy of trust.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Craft -->
+    <section id="craft">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="craft.eyebrow">How we build</p>
+          <h2 data-i18n="craft.title">A passion for design. An obsession with quality.</h2>
+          <p data-i18n="craft.lead">Beautiful on the outside, careful on the inside. These are the habits behind every release.</p>
+        </header>
+        <ul class="craft__list">
+          <li class="reveal"><h3 data-i18n="craft.tests.t">Tested before shipped</h3><p data-i18n="craft.tests.d">Automated tests and continuous integration on every change.</p></li>
+          <li class="reveal"><h3 data-i18n="craft.docs.t">Documented in two languages</h3><p data-i18n="craft.docs.d">Clear docs and decision records, in English and Spanish.</p></li>
+          <li class="reveal"><h3 data-i18n="craft.design.t">Designed with intention</h3><p data-i18n="craft.design.d">Interfaces inspired by the best of macOS, built for Linux first.</p></li>
+          <li class="reveal"><h3 data-i18n="craft.a11y.t">Accessible by default</h3><p data-i18n="craft.a11y.d">Readable contrast, keyboard support and reduced-motion respect.</p></li>
+          <li class="reveal"><h3 data-i18n="craft.privacy.t">Private by design</h3><p data-i18n="craft.privacy.d">Data stays on your devices. Connections are local and authorised.</p></li>
+          <li class="reveal"><h3 data-i18n="craft.licenses.t">Free licences</h3><p data-i18n="craft.licenses.d">Apache-2.0 for code, SIL OFL for our fonts — yours to use and study.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lino -->
+    <section id="lino">
+      <div class="container lino__grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="lino.eyebrow">Meet Lino</p>
+          <h2 class="section-head" style="font-size:var(--step-3);margin:var(--space-3) 0 var(--space-5)" data-i18n="lino.title">Our mascot was hiding in plain sight.</h2>
+          <div class="story__body">
+            <p data-i18n="lino.p1">Lino is an olinguito, a small night animal from the cloud forests of the Colombian Andes. Science only described it in 2013 — specimens had sat in museums for decades, mislabelled, until someone curious looked closely.</p>
+            <p data-i18n="lino.p2">He comes out when the moon does, he is curious and patient, and his name carries a wink: o-LIN-guito, like Linux.</p>
+          </div>
+          <ul class="chips lino__facts">
+            <li class="chip"><span data-i18n="lino.f1">Nocturnal</span></li>
+            <li class="chip"><span data-i18n="lino.f2">Born in the Andes</span></li>
+            <li class="chip"><span data-i18n="lino.f3">Discovered in 2013</span></li>
+          </ul>
+        </div>
+        <img class="reveal lino__art" src="assets/img/lino-moon.svg" width="800" height="800" loading="lazy" data-i18n-attr="alt:img.lino" alt="Lino, a small orange olinguito, sitting in the smiling cradle moon.">
+      </div>
+    </section>
+
+    <!-- Founder -->
+    <section id="founder">
+      <div class="container founder__grid">
+        <div class="portrait reveal">
+          <picture>
+            <source srcset="assets/img/founder.webp" type="image/webp">
+            <img src="assets/img/founder.png" width="300" height="300" loading="lazy" data-i18n-attr="alt:img.founder" alt="Portrait of Jose David Carranza Angarita, founder of Moon Technologies.">
+          </picture>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="founder.eyebrow">Founder</p>
+          <h2 class="founder__name">Jose David Carranza Angarita</h2>
+          <p class="founder__role" data-i18n="founder.role">Founder · Software engineer</p>
+          <div class="founder__bio">
+            <p data-i18n="founder.p1">I'm a software engineer from Colombia. I build desktop tools for Linux, games with Unity, and — for fun — programming languages.</p>
+            <p data-i18n="founder.p2">I started Moon Technologies with a simple conviction: free software made in Latin America can be as polished, careful and trustworthy as anything in the world. Everything we make is built in the open, tested, documented — and made with love.</p>
+          </div>
+          <div class="founder__links">
+            <a class="btn btn--ghost" href="https://github.com/jdswe">GitHub</a>
+            <a class="btn btn--ghost" href="https://jdswe.github.io" data-i18n="founder.portfolio">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Identity -->
+    <section id="identity">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="identity.eyebrow">Identity</p>
+          <h2 data-i18n="identity.title">Our own type family.</h2>
+          <p data-i18n="identity.lead">Moon Sans, Moon Serif and Moon Mono — from Thin to Black, with true italics. Free for everyone under the SIL Open Font License.</p>
+        </header>
+        <div class="identity__grid">
+          <a class="card reveal" href="https://github.com/Moon-TechnologiesCO/moon-fonts" style="text-decoration:none">
+            <p class="eyebrow">Moon Sans</p>
+            <p class="type-sample">Aa Gg 123</p>
+            <p data-i18n="identity.sans">Interfaces, reading and headlines.</p>
+          </a>
+          <a class="card reveal" href="https://github.com/Moon-TechnologiesCO/moon-fonts" style="text-decoration:none">
+            <p class="eyebrow">Moon Serif</p>
+            <p class="type-sample type-sample--serif">Aa Gg 123</p>
+            <p data-i18n="identity.serif">Editorial moments and quotes.</p>
+          </a>
+          <a class="card reveal" href="https://github.com/Moon-TechnologiesCO/moon-fonts" style="text-decoration:none">
+            <p class="eyebrow">Moon Mono</p>
+            <p class="type-sample type-sample--mono">0O {i} =&gt;</p>
+            <p data-i18n="identity.mono">Code, terminals and data.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/lockup-dark.svg" width="220" height="50" alt="Moon Technologies">
+          <p data-i18n="footer.tagline">Software that shines, with nothing to hide.</p>
+        </div>
+        <nav aria-labelledby="footer-explore">
+          <h2 id="footer-explore" data-i18n="footer.explore">Explore</h2>
+          <ul>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#work" data-i18n="nav.work">Open source</a></li>
+            <li><a href="#principles" data-i18n="nav.principles">Principles</a></li>
+            <li><a href="#story" data-i18n="nav.story">Story</a></li>
+            <li><a href="#founder" data-i18n="nav.founder">Founder</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-open">
+          <h2 id="footer-open" data-i18n="footer.open">Open source</h2>
+          <ul>
+            <li><a href="https://github.com/Moon-TechnologiesCO">GitHub</a></li>
+            <li><a href="https://github.com/Moon-TechnologiesCO/moon-fonts" data-i18n="footer.fonts">Moon fonts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__legal">
+        <span>© <span data-year>2026</span> Moon Technologies · Colombia</span>
+        <span data-i18n="footer.legal">Moon Technologies, the cradle moon and Lino are trademarks of Moon Technologies.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
